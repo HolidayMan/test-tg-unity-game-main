@@ -16,6 +16,7 @@
         let first_name = tgBot.initDataUnsafe.user.first_name;
         let stringToShow = `Hello ${first_name}! Your user id is ${user_id}`;
         window.addEventListener("gameloaded", function() {
+            console.log('Game loaded');
             document.getElementById('unityGame').contentWindow.postMessage(stringToShow, '*');
         });
     </script>
