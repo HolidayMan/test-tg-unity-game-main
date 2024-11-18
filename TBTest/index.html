@@ -108,6 +108,11 @@
           progressBarFull.style.width = 100 * progress + "%";
               }).then((unityInstance) => {
                 UnityInstance = unityInstance;
+                window.addEventListener('message', function(event) {
+                  if (event.data) {
+                    UnityInstance.SendMessage('ColorChanger', 'SetGreen', event.data);
+                  }
+                });
                 loadingBar.style.display = "none";
                 fullscreenButton.onclick = () => {
                   unityInstance.SetFullscreen(1);
@@ -117,11 +122,7 @@
               });
             };
 
-      window.addEventListener('message', function(event) {
-        if (event.data) {
-          UnityInstance.SendMessage('ColorChanger', 'SetGreen', event.data);
-        }
-      });
+
 
       document.body.appendChild(script);
 
