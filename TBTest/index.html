@@ -112,7 +112,7 @@
                     parent.postMessage("gameloaded", "*");
                   }
                   if (event.data !== "gameloaded") {
-                    unityInstance.SendMessage('ColorChanger', 'SetGreen', event.data);
+                    unityInstance.SendMessage('Logic', 'SetGreen', event.data);
                     console.log("Message sent to Unity: " + event.data);
                   }
                 });
