@@ -106,7 +106,7 @@
         createUnityInstance(canvas, config, (progress) => {
           progressBarFull.style.width = 100 * progress + "%";
               }).then((unityInstance) => {
-                window.dispatchEvent(new Event('gameloaded'))
+                window.postMessage("gameLoaded", "*");
                 UnityInstance = unityInstance;
                 window.addEventListener('message', function(event) {
                   if (event.data) {
