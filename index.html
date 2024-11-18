@@ -14,16 +14,15 @@
         tgBot.expand();
         let user_id = tgBot.initDataUnsafe.user.id;
         let first_name = tgBot.initDataUnsafe.user.first_name;
-        window.onload = function() {
-            document.getElementById('userId').innerText = 'User ID: ' + user_id;
-            document.getElementById('firstName').innerText = 'First Name: ' + first_name;
+        let stringToShow = `Hello ${first_name}! Your user id is ${user_id}`;
+            window.onload = function() {
+                document.getElementById('unityGame').contentWindow.postMessage(stringToShow, '*');
         }
     </script>
 
     <div id="app">
         <h1>Telegram Unity App Test</h1>
-        <p id="userId"></p>
-        <p id="firstName"></p>
+        <iframe src="TBTest/index.html" width="100%" height="100%" id="unityGame"></iframe>
     </div>
 
 </body>
