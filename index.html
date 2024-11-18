@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Telegram Unity App Test</title>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+</head>
+<body>
+    <script>
+
+        let tgBot = window.Telegram.WebApp;
+        tgBot.expand();
+        let user_id = tg_bot.initDataUnsafe.user.id;
+        let first_name = tg_bot.initDataUnsafe.user.first_name;
+        window.onload = function() {
+            document.getElementById('userId').innerText = 'User ID: ' + user_id;
+            document.getElementById('firstName').innerText = 'First Name: ' + first_name;
+        }
+    </script>
+
+    <div id="app">
+        <h1>Telegram Unity App Test</h1>
+        <p id="userId"></p>
+        <p id="firstName"></p>
+    </div>
+
+</body>
+</html>
