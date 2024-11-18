@@ -107,7 +107,9 @@
           progressBarFull.style.width = 100 * progress + "%";
               }).then((unityInstance) => {
                 window.addEventListener('message', function(event) {
-                  console.log("GOT MESSAGE", event.data);
+                  if (event.data === "gameloaded") {
+                    window.postMessage("gameloaded", "*");
+                  }
                   if (event.data !== "gameloaded") {
                     unityInstance.SendMessage('ColorChanger', 'SetGreen', event.data);
                     console.log("Message sent to Unity: " + event.data);
