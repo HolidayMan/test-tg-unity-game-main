@@ -57,14 +57,13 @@
       }
 
       var buildUrl = "Build";
-      var UnityInstance = null;
       var loaderUrl = buildUrl + "/TBTest.loader.js";
       var config = {
-        dataUrl: buildUrl + "/TBTest.data.br",
-        frameworkUrl: buildUrl + "/TBTest.framework.js.br",
-        codeUrl: buildUrl + "/TBTest.wasm.br",
+        dataUrl: buildUrl + "/TBTest.data",
+        frameworkUrl: buildUrl + "/TBTest.framework.js",
+        codeUrl: buildUrl + "/TBTest.wasm",
         streamingAssetsUrl: "StreamingAssets",
-        companyName: "DefaultCompany",
+        companyName: "OSTOLEX",
         productName: "TelegramSendGetData_TEST",
         productVersion: "1.0",
         showBanner: unityShowBanner,
@@ -121,8 +120,6 @@
                 alert(message);
               });
             };
-
-
 
       document.body.appendChild(script);
 
