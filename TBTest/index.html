@@ -109,7 +109,7 @@
                 window.addEventListener('message', function(event) {
                   console.log("GOT MESSAGE in iframe", event.data);
                   if (event.data === "gameloaded") {
-                    window.postMessage("gameloaded", "*");
+                    parent.postMessage("gameloaded", "*");
                   }
                   if (event.data !== "gameloaded") {
                     unityInstance.SendMessage('ColorChanger', 'SetGreen', event.data);
