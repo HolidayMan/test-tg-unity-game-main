@@ -12,8 +12,8 @@
 
         let tgBot = window.Telegram.WebApp;
         tgBot.expand();
-        let user_id = tg_bot.initDataUnsafe.user.id;
-        let first_name = tg_bot.initDataUnsafe.user.first_name;
+        let user_id = tgBot.initDataUnsafe.user.id;
+        let first_name = tgBot.initDataUnsafe.user.first_name;
         window.onload = function() {
             document.getElementById('userId').innerText = 'User ID: ' + user_id;
             document.getElementById('firstName').innerText = 'First Name: ' + first_name;
